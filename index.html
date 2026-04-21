@@ -559,9 +559,17 @@ const MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
 
 // ═══════════════════ STORAGE ═══════════════
 async function dbLoad(){
-  try{ const r=await window.storage.get(DB_KEY,true); return r?JSON.parse(r.value):[]; }catch{ return []; }
+  try{
+    const r = localStorage.getItem(DB_KEY);
+    return r ? JSON.parse(r) : [];
+  }catch{
+    return [];
+  }
 }
-async function dbSave(list){ await window.storage.set(DB_KEY,JSON.stringify(list),true); }
+
+async function dbSave(list){
+  localStorage.setItem(DB_KEY, JSON.stringify(list));
+}
 
 function dKey(d){ return d instanceof Date ? d.toISOString().slice(0,10) : d; }
 function genId(){ return 'BG-'+String(Math.floor(1000+Math.random()*9000)); }
@@ -793,10 +801,18 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 const ham=document.getElementById('hamburger'),navL=document.getElementById('navLinks');
 ham.addEventListener('click',()=>navL.classList.toggle('open'));
 navL.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navL.classList.remove('open')));
-new IntersectionObserver((entries,obs)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.12})
-  .observe.bind(document.querySelectorAll('.reveal').forEach(el=>{
-    new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}});},{threshold:.12}).observe(el);
-  }));
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
 
 // INIT
 initSvcs();
