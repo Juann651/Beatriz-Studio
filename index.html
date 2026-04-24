@@ -1,822 +1,455 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Beatriz Gonçalves Studio | Nail Designer em Vila Velha - ES</title>
-<meta name="description" content="Beatriz Gonçalves Studio — a melhor Nail Designer em Vila Velha, ES. Agende online agora!"/>
-<meta name="keywords" content="Studio Nail Designer, melhor Nail Designer em Vila Velha, unhas de gel Vila Velha"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --rose:#f4a0b5;--rose-deep:#e07898;--rose-light:#fde8ef;--rose-pale:#fff5f8;
-  --white:#fff;--ink:#2a1a22;--muted:#8c6878;--border:#f0dae3;--shadow:rgba(224,120,152,.18);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden}
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
-nav.scrolled{box-shadow:0 4px 24px var(--shadow)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);text-decoration:none}
-.nav-logo span{color:var(--rose-deep)}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .25s}
-.nav-links a:hover{color:var(--rose-deep)}
-.nav-cta{background:var(--rose-deep)!important;color:#fff!important;padding:.45rem 1.15rem!important;border-radius:50px;font-size:.78rem!important;transition:background .25s,transform .2s!important}
-.nav-cta:hover{background:var(--rose)!important;transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
-/* HERO */
-.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 5vw 60px}
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 70% 60% at 80% 50%,#fde8ef 0%,transparent 65%),radial-gradient(ellipse 40% 40% at 10% 80%,#fce4ee 0%,transparent 60%)}
-.hero-deco{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:min(520px,55vw);height:min(520px,55vw);border-radius:40% 60% 55% 45%/45% 50% 50% 55%;background:linear-gradient(135deg,#f4a0b5 0%,#e07898 50%,#fde8ef 100%);opacity:.18;filter:blur(2px);animation:morph 10s ease-in-out infinite alternate}
-@keyframes morph{from{border-radius:40% 60% 55% 45%/45% 50% 50% 55%}to{border-radius:60% 40% 45% 55%/55% 45% 55% 45%}}
-.hero-content{position:relative;z-index:1;max-width:620px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-deep);background:var(--rose-light);padding:.35rem 1rem;border-radius:50px;margin-bottom:1.8rem;animation:fadeUp .8s ease both}
-.hero-eyebrow::before{content:'✦';font-size:.7rem}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5.2rem);font-weight:600;line-height:1.08;color:var(--ink);animation:fadeUp .8s .12s ease both}
-.hero h1 em{font-style:italic;color:var(--rose-deep);display:block}
-.hero-sub{margin-top:1.4rem;font-size:1.05rem;font-weight:300;color:var(--muted);line-height:1.7;max-width:480px;animation:fadeUp .8s .24s ease both}
-.hero-actions{margin-top:2.4rem;display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .8s .36s ease both}
-.btn-primary{background:var(--rose-deep);color:#fff;padding:.85rem 2rem;border-radius:50px;font-size:.9rem;font-weight:500;text-decoration:none;transition:background .25s,transform .2s,box-shadow .25s;box-shadow:0 6px 20px rgba(224,120,152,.35);display:inline-flex;align-items:center;gap:.4rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
-.btn-primary:hover{background:var(--rose);transform:translateY(-2px);box-shadow:0 10px 28px rgba(224,120,152,.45)}
-.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.btn-ghost{color:var(--ink);padding:.85rem 2rem;border-radius:50px;font-size:.9rem;font-weight:500;text-decoration:none;border:1.5px solid var(--border);transition:border-color .25s,color .25s,transform .2s;display:inline-flex;align-items:center;gap:.4rem;background:none;cursor:pointer;font-family:'DM Sans',sans-serif}
-.btn-ghost:hover{border-color:var(--rose-deep);color:var(--rose-deep);transform:translateY(-2px)}
-.hero-stats{margin-top:3.5rem;display:flex;gap:2.5rem;flex-wrap:wrap;animation:fadeUp .8s .48s ease both}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;line-height:1}
-.stat-label{font-size:.75rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.2rem}
-/* SECTIONS */
-section{padding:96px 5vw}
-.section-tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:1rem}
-.section-tag::before{content:'';display:block;width:18px;height:1.5px;background:var(--rose-deep)}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:600;line-height:1.15;color:var(--ink);margin-bottom:1rem}
-.section-sub{font-size:1rem;font-weight:300;color:var(--muted);line-height:1.7;max-width:540px}
-/* SERVICES */
-.services-header{text-align:center;margin-bottom:3.5rem}
-.services-header .section-sub{margin:0 auto}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
-.service-card{background:var(--white);border:1.5px solid var(--border);border-radius:20px;padding:2rem 1.8rem;transition:transform .3s,box-shadow .3s,border-color .3s}
-.service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px var(--shadow);border-color:var(--rose)}
-.service-icon{width:56px;height:56px;border-radius:16px;background:var(--rose-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1.4rem}
-.service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:.6rem}
-.service-card p{font-size:.88rem;font-weight:300;color:var(--muted);line-height:1.65}
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;max-width:1100px;margin:0 auto}
-.about-visual{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(145deg,#f9d0de 0%,#e07898 50%,#c45b7a 100%);display:flex;align-items:center;justify-content:center}
-.about-visual-inner{text-align:center;color:#fff}
-.about-visual-inner .big-icon{font-size:5rem;display:block;margin-bottom:1rem;opacity:.9}
-.about-visual-inner p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;font-weight:300;opacity:.85}
-.about-badge{position:absolute;bottom:2rem;right:-1rem;background:#fff;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 8px 30px var(--shadow);display:flex;align-items:center;gap:.7rem}
-.badge-icon{font-size:1.5rem}
-.badge-text{font-size:.78rem;color:var(--muted)}
-.badge-text strong{display:block;color:var(--ink);font-weight:500;font-size:.88rem}
-.about-content{display:flex;flex-direction:column;gap:1.4rem}
-.about-features{display:flex;flex-direction:column;gap:.8rem;margin-top:.5rem}
-.about-feature{display:flex;align-items:center;gap:.8rem;font-size:.9rem}
-.about-feature::before{content:'✦';color:var(--rose-deep);font-size:.7rem;flex-shrink:0}
-/* TESTIMONIALS */
-.testimonials-header{text-align:center;margin-bottom:3rem}
-.rating-row{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-bottom:2.5rem}
-.stars{color:#f4a623;font-size:1.2rem;letter-spacing:.1rem}
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:1000px;margin:0 auto}
-.testimonial-card{background:var(--rose-pale);border:1.5px solid var(--border);border-radius:20px;padding:2rem;transition:transform .3s,box-shadow .3s}
-.testimonial-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px var(--shadow)}
-.t-stars{color:#f4a623;margin-bottom:1rem}
-.t-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:1.4rem}
-.t-author{display:flex;align-items:center;gap:.8rem}
-.t-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--rose-deep));display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;font-weight:600}
-.t-name{font-size:.88rem;font-weight:500;color:var(--ink)}
-.t-date{font-size:.75rem;color:var(--muted)}
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;max-width:1100px;margin:0 auto;align-items:start}
-.contact-info{display:flex;flex-direction:column;gap:2rem}
-.contact-item{display:flex;gap:1rem;align-items:flex-start}
-.contact-icon-box{width:48px;height:48px;border-radius:14px;background:#fff;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;box-shadow:0 4px 12px var(--shadow)}
-.contact-label{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block}
-.contact-value{font-size:.95rem;color:var(--ink);line-height:1.5}
-.contact-value a{color:var(--rose-deep);text-decoration:none}
-.map-wrap{border-radius:20px;overflow:hidden;border:1.5px solid var(--border);height:240px;margin-top:1rem;box-shadow:0 8px 24px var(--shadow)}
-.map-wrap iframe{width:100%;height:100%;border:0}
-/* FOOTER */
-footer{background:var(--ink);color:rgba(255,255,255,.6);padding:56px 5vw 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1)}
-.footer-brand p{font-size:.88rem;line-height:1.7;max-width:300px;margin-top:.8rem}
-.footer-col h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#fff;margin-bottom:1rem}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
-.footer-col ul a{font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .25s}
-.footer-col ul a:hover{color:var(--rose)}
-.social-links{display:flex;gap:.8rem;margin-top:1.2rem}
-.social-link{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);text-decoration:none;transition:background .25s,transform .2s}
-.social-link:hover{background:var(--rose-deep);color:#fff;transform:translateY(-2px)}
-.footer-bottom{max-width:1100px;margin:1.5rem auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-bottom p{font-size:.8rem}
-.footer-bottom a{color:var(--rose);text-decoration:none}
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:250;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.45);transition:transform .2s;animation:pulse-wa 2.5s ease-in-out infinite}
-.wa-float:hover{transform:scale(1.08)}
-@keyframes pulse-wa{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.45)}50%{box-shadow:0 6px 36px rgba(37,211,102,.65)}}
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-/* ══════════════════════════════════
-   BOOKING SYSTEM
-══════════════════════════════════ */
-#agendar{background:var(--rose-pale)}
-.booking-header{text-align:center;margin-bottom:2.5rem}
-.booking-header .section-sub{margin:0 auto}
-/* Steps */
-.steps-bar{display:flex;align-items:flex-start;justify-content:center;max-width:560px;margin:0 auto 3rem}
-.step-item{display:flex;flex-direction:column;align-items:center;gap:.4rem;flex:1;position:relative}
-.step-item:not(:last-child)::after{content:'';position:absolute;top:19px;left:50%;width:100%;height:2px;background:var(--border);z-index:0;transition:background .4s}
-.step-item.done:not(:last-child)::after{background:var(--rose-deep)}
-.step-circle{width:38px;height:38px;border-radius:50%;border:2px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600;color:var(--muted);position:relative;z-index:1;transition:all .3s}
-.step-item.active .step-circle{border-color:var(--rose-deep);background:var(--rose-deep);color:#fff;box-shadow:0 0 0 4px var(--rose-light)}
-.step-item.done .step-circle{border-color:var(--rose-deep);background:var(--rose-deep);color:#fff}
-.step-label{font-size:.68rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:center;transition:color .3s}
-.step-item.active .step-label,.step-item.done .step-label{color:var(--rose-deep)}
-/* Panels */
-.booking-panel{display:none;animation:fadeUp .35s ease}
-.booking-panel.active{display:block}
-/* Step 1 service cards */
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;max-width:900px;margin:0 auto}
-.svc-card{border:2px solid var(--border);border-radius:16px;padding:1.4rem 1rem;cursor:pointer;transition:all .25s;text-align:center;background:#fff;position:relative;user-select:none}
-.svc-card:hover{border-color:var(--rose);transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
-.svc-card.sel{border-color:var(--rose-deep);background:var(--rose-pale);box-shadow:0 8px 24px var(--shadow)}
-.svc-card.sel::after{content:'✓';position:absolute;top:.6rem;right:.8rem;font-size:.78rem;color:var(--rose-deep);font-weight:700}
-.svc-icon2{font-size:2rem;margin-bottom:.7rem;display:block}
-.svc-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.25rem}
-.svc-dur{font-size:.75rem;color:var(--muted)}
-/* Step 2 calendar */
-.cal-wrap{max-width:780px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
-.cal-box,.slots-box{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:1.4rem;box-shadow:0 4px 16px var(--shadow)}
-.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
-.cal-title-txt{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink)}
-.cal-nav-btn{background:none;border:1.5px solid var(--border);border-radius:8px;width:30px;height:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .2s;font-size:.9rem}
-.cal-nav-btn:hover{border-color:var(--rose-deep);color:var(--rose-deep)}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.cal-dn{text-align:center;font-size:.6rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:.35rem 0}
-.cal-d{text-align:center;padding:.45rem .1rem;border-radius:7px;font-size:.83rem;cursor:pointer;transition:all .2s;line-height:1;color:var(--ink)}
-.cal-d:hover:not(.dis):not(.emp){background:var(--rose-light);color:var(--rose-deep)}
-.cal-d.today{font-weight:700;color:var(--rose-deep)}
-.cal-d.picked{background:var(--rose-deep);color:#fff;font-weight:600}
-.cal-d.dis{color:#ddd;cursor:not-allowed;pointer-events:none}
-.cal-d.emp{pointer-events:none}
-.cal-d.has-dot{position:relative}
-.cal-d.has-dot::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:3px;height:3px;border-radius:50%;background:var(--rose)}
-.cal-d.picked.has-dot::after{background:#fff}
-/* Slots */
-.slots-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.9rem}
-.slots-grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
-.slot-b{border:1.5px solid var(--border);background:#fff;border-radius:9px;padding:.5rem .2rem;font-family:'DM Sans',sans-serif;font-size:.8rem;cursor:pointer;transition:all .2s;color:var(--ink);text-align:center}
-.slot-b:hover:not(.bkd){border-color:var(--rose);color:var(--rose-deep);background:var(--rose-pale)}
-.slot-b.picked-slot{background:var(--rose-deep);border-color:var(--rose-deep);color:#fff;font-weight:600}
-.slot-b.bkd{background:#f5f5f5;color:#ccc;cursor:not-allowed;text-decoration:line-through;font-size:.72rem;pointer-events:none}
-.slots-empty{font-size:.85rem;color:var(--muted);text-align:center;padding:1.2rem 0;grid-column:1/-1}
-/* Step 3 form */
-.info-form{max-width:540px;margin:0 auto;display:flex;flex-direction:column;gap:1.1rem}
-.sum-mini{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:.9rem 1.1rem;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.84rem;color:var(--muted);margin-bottom:.3rem}
-.sum-mini strong{color:var(--ink);font-weight:500}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fg{display:flex;flex-direction:column;gap:.35rem}
-.fg label{font-size:.72rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.fg input,.fg select,.fg textarea{background:#fff;border:1.5px solid var(--border);border-radius:11px;padding:.72rem 1rem;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);outline:none;transition:border-color .25s,box-shadow .25s;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--rose-deep);box-shadow:0 0 0 3px rgba(224,120,152,.15)}
-.fg textarea{resize:vertical;min-height:76px}
-/* Step 4 confirm */
-.confirm-box{max-width:500px;margin:0 auto;background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:2.5rem;text-align:center;box-shadow:0 8px 32px var(--shadow)}
-.confirm-icon2{font-size:3.2rem;display:block;margin-bottom:1rem;animation:pop .5s ease both}
-@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
-.confirm-box h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
-.confirm-box p{font-size:.92rem;color:var(--muted);line-height:1.6;margin-bottom:1.4rem}
-.conf-details{background:var(--rose-pale);border-radius:14px;padding:1.1rem;text-align:left;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.6rem}
-.conf-row{display:flex;justify-content:space-between;font-size:.86rem}
-.conf-row span:first-child{color:var(--muted)}
-.conf-row span:last-child{font-weight:500;color:var(--ink)}
-.conf-code{font-family:monospace;font-size:1.25rem;font-weight:700;color:var(--rose-deep);letter-spacing:.1em;background:var(--rose-light);padding:.25rem .7rem;border-radius:7px;display:inline-block}
-/* step nav */
-.step-nav{display:flex;gap:1rem;justify-content:center;margin-top:2.2rem;flex-wrap:wrap}
-
-/* ══════════════════════════════════
-   ADMIN PANEL
-══════════════════════════════════ */
-.admin-fab{position:fixed;bottom:5.5rem;right:1.5rem;z-index:250;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 14px rgba(42,26,34,.35);transition:transform .2s}
-.admin-fab:hover{transform:scale(1.1)}
-.adm-overlay{display:none;position:fixed;inset:0;z-index:400;background:rgba(42,26,34,.5);backdrop-filter:blur(4px)}
-.adm-overlay.open{display:flex;align-items:stretch;justify-content:flex-end;animation:fadeIn .25s ease}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.adm-panel{width:min(680px,100vw);background:#fff;height:100vh;overflow-y:auto;box-shadow:-8px 0 40px rgba(42,26,34,.2);animation:slideIn .3s ease;display:flex;flex-direction:column}
-@keyframes slideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
-.adm-header{padding:1.4rem 1.8rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:10}
-.adm-header h2{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink)}
-.adm-close{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--muted);line-height:1;padding:.2rem}
-.adm-login{padding:2.5rem;display:flex;flex-direction:column;align-items:center;gap:1.3rem;flex:1;justify-content:center}
-.adm-login h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink)}
-.adm-login p{font-size:.88rem;color:var(--muted);text-align:center;max-width:280px}
-.adm-login input{width:100%;max-width:300px;border:1.5px solid var(--border);border-radius:11px;padding:.7rem 1rem;font-family:'DM Sans',sans-serif;font-size:.95rem;outline:none;transition:border-color .25s}
-.adm-login input:focus{border-color:var(--rose-deep)}
-.adm-err{color:#ef4444;font-size:.82rem;display:none}
-.adm-body{padding:1.4rem 1.8rem;flex:1;display:flex;flex-direction:column;gap:1.4rem}
-.adm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
-.adm-stat{background:var(--rose-pale);border:1.5px solid var(--border);border-radius:13px;padding:.9rem;text-align:center}
-.adm-stat .asn{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--ink)}
-.adm-stat .asl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.adm-filters{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
-.af-btn{border:1.5px solid var(--border);background:#fff;border-radius:50px;padding:.35rem .9rem;font-family:'DM Sans',sans-serif;font-size:.76rem;cursor:pointer;transition:all .2s;color:var(--muted)}
-.af-btn.active,.af-btn:hover{border-color:var(--rose-deep);color:var(--rose-deep);background:var(--rose-light)}
-.adm-search{flex:1;min-width:140px;border:1.5px solid var(--border);border-radius:50px;padding:.35rem .9rem;font-family:'DM Sans',sans-serif;font-size:.8rem;outline:none;transition:border-color .25s}
-.adm-search:focus{border-color:var(--rose-deep)}
-.bk-card{background:#fff;border:1.5px solid var(--border);border-radius:15px;padding:1.1rem;display:flex;gap:.9rem;align-items:flex-start;transition:box-shadow .2s;margin-bottom:.7rem}
-.bk-card:hover{box-shadow:0 4px 16px var(--shadow)}
-.bk-date{background:var(--rose-pale);border-radius:9px;padding:.55rem .7rem;text-align:center;flex-shrink:0;min-width:48px}
-.bk-day{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--rose-deep);line-height:1}
-.bk-mon{font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.bk-info{flex:1;min-width:0}
-.bk-name{font-weight:500;color:var(--ink);font-size:.93rem}
-.bk-meta{font-size:.78rem;color:var(--muted);margin-top:.2rem;line-height:1.55}
-.bk-svc-tag{font-size:.74rem;background:var(--rose-light);color:var(--rose-deep);border-radius:50px;padding:.15rem .6rem;display:inline-block;margin-top:.25rem}
-.bk-code{font-size:.68rem;color:var(--muted);font-family:monospace;margin-top:.2rem}
-.bk-actions{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;flex-shrink:0}
-.bk-badge{font-size:.67rem;font-weight:600;padding:.18rem .6rem;border-radius:50px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
-.st-pending{background:#fef9c3;color:#a16207}
-.st-confirmed{background:#dcfce7;color:#166534}
-.st-cancelled{background:#fee2e2;color:#991b1b}
-.st-done{background:#e0e7ff;color:#3730a3}
-.bk-btn{border:none;border-radius:7px;padding:.28rem .6rem;font-size:.7rem;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;transition:all .2s;white-space:nowrap}
-.bb-ok{background:#dcfce7;color:#166534}.bb-ok:hover{background:#bbf7d0}
-.bb-cancel{background:#fee2e2;color:#991b1b}.bb-cancel:hover{background:#fecaca}
-.bb-done{background:#e0e7ff;color:#3730a3}.bb-done:hover{background:#c7d2fe}
-.bb-del{background:#f5f5f5;color:#888}.bb-del:hover{background:#fee2e2;color:#991b1b}
-.adm-empty{text-align:center;padding:3rem;color:var(--muted);font-size:.88rem}
-.adm-empty span{font-size:2.5rem;display:block;margin-bottom:.8rem}
-/* LOOKUP */
-.lookup-box{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:1.8rem;box-shadow:0 4px 16px var(--shadow)}
-.lookup-box p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:1rem}
-.lookup-row{display:flex;gap:.6rem}
-.lookup-input{flex:1;border:1.5px solid var(--border);border-radius:11px;padding:.7rem 1rem;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;transition:border-color .25s}
-.lookup-input:focus{border-color:var(--rose-deep)}
-/* MOBILE */
-@media(max-width:768px){
-  .nav-links{display:none;flex-direction:column;gap:0}
-  .nav-links.open{display:flex;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:1rem 5vw 1.5rem}
-  .nav-links li a{display:block;padding:.75rem 0;border-bottom:1px solid var(--border);font-size:.9rem!important}
-  .nav-links li:last-child a{border-bottom:none}
-  .nav-cta{background:transparent!important;color:var(--rose-deep)!important;padding:.75rem 0!important}
-  .hamburger{display:flex}
-  .hero-deco,.hero-stats .stat:last-child{display:none}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .about-visual{aspect-ratio:16/9}
-  .about-badge{right:1rem}
-  .footer-grid{grid-template-columns:1fr;gap:2rem}
-  .cal-wrap{grid-template-columns:1fr}
-  .frow{grid-template-columns:1fr}
-  .adm-stats{grid-template-columns:1fr 1fr}
-  .steps-bar{max-width:100%}
-}
-@media(max-width:480px){
-  section{padding:72px 5vw}
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .slots-grid2{grid-template-columns:repeat(4,1fr)}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beatriz Gonçalves Studio | Nail Designer em Vila Velha - ES</title>
+  <meta name="description" content="Beatriz Gonçalves Studio — a melhor Nail Designer em Vila Velha, ES. Agende online agora!" />
+  <meta name="keywords" content="Studio Nail Designer, melhor Nail Designer em Vila Velha, unhas de gel Vila Velha" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">Beatriz <span>Gonçalves</span> Studio</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#depoimentos">Avaliações</a></li>
-    <li><a href="#contato">Contato</a></li>
-    <li><a href="#agendar" class="nav-cta">Agendar Online</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Beatriz <span>Gonçalves</span> Studio</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#depoimentos">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#agendar" class="nav-cta">Agendar Online</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-bg"></div>
-  <div class="hero-deco"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Studio Nail Designer · Vila Velha, ES</span>
-    <h1>Suas unhas<em>merecem arte.</em></h1>
-    <p class="hero-sub">Bem-vinda ao Beatriz Gonçalves Studio. Cuidado, beleza e elegância em cada detalhe — com técnicas premium e muito carinho.</p>
-    <div class="hero-actions">
-      <a href="#agendar" class="btn-primary">📅 Agendar Online</a>
-      <a href="#servicos" class="btn-ghost">Ver Serviços</a>
+  <!-- ── Hero ────────────────────────────────────────────────── -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-deco"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Studio Nail Designer · Vila Velha, ES</span>
+      <h1>Suas unhas<em>merecem arte.</em></h1>
+      <p class="hero-sub">
+        Bem-vinda ao Beatriz Gonçalves Studio. Cuidado, beleza e elegância em cada detalhe —
+        com técnicas premium e muito carinho.
+      </p>
+      <div class="hero-actions">
+        <a href="#agendar" class="btn-primary">📅 Agendar Online</a>
+        <a href="#servicos" class="btn-ghost">Ver Serviços</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">5.0</div><div class="stat-label">Avaliação</div></div>
+        <div><div class="stat-num">51+</div><div class="stat-label">Avaliações</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Dedicação</div></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div><div class="stat-num">5.0</div><div class="stat-label">Avaliação</div></div>
-      <div><div class="stat-num">51+</div><div class="stat-label">Avaliações</div></div>
-      <div><div class="stat-num">100%</div><div class="stat-label">Dedicação</div></div>
+  </section>
+
+  <!-- ── Services ────────────────────────────────────────────── -->
+  <section id="servicos">
+    <div class="services-header reveal">
+      <div class="section-tag">O que oferecemos</div>
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-sub">
+        Tratamentos especializados para realçar a beleza e saúde das suas unhas,
+        com produtos de alta qualidade.
+      </p>
     </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="servicos">
-  <div class="services-header reveal">
-    <div class="section-tag">O que oferecemos</div>
-    <h2 class="section-title">Nossos Serviços</h2>
-    <p class="section-sub">Tratamentos especializados para realçar a beleza e saúde das suas unhas, com produtos de alta qualidade.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card reveal"><div class="service-icon">💅</div><h3>Unhas de Gel</h3><p>Alongamento e revestimento em gel de alta durabilidade. Resultado impecável com brilho intenso.</p></div>
-    <div class="service-card reveal"><div class="service-icon">✨</div><h3>Lixamento de Unhas</h3><p>Modelagem e lixamento profissional para o formato ideal, preparando para qualquer acabamento.</p></div>
-    <div class="service-card reveal"><div class="service-icon">🌸</div><h3>Remoção de Cutículas</h3><p>Remoção suave e cuidadosa das cutículas, promovendo saúde e estética perfeita.</p></div>
-    <div class="service-card reveal"><div class="service-icon">🤲</div><h3>Hidratação Profunda</h3><p>Tratamento intensivo com massagem relaxante, hidratantes premium e óleos nutritivos.</p></div>
-    <div class="service-card reveal"><div class="service-icon">🎨</div><h3>Esmaltação Tradicional</h3><p>Aplicação de esmalte tradicional com acabamento profissional e cor vibrante.</p></div>
-    <div class="service-card reveal"><div class="service-icon">💎</div><h3>Esmaltação em Gel</h3><p>Esmaltação em gel de longa duração com brilho intenso. Sem lascas por semanas.</p></div>
-  </div>
-</section>
-
-<!-- BOOKING -->
-<section id="agendar">
-  <div class="booking-header reveal">
-    <div class="section-tag">Agendamento Online</div>
-    <h2 class="section-title">Agende seu horário</h2>
-    <p class="section-sub">Escolha o serviço, data e horário. Simples, rápido e sem precisar ligar!</p>
-  </div>
-
-  <div class="steps-bar" id="stepsBar">
-    <div class="step-item active" id="si1"><div class="step-circle">1</div><div class="step-label">Serviço</div></div>
-    <div class="step-item" id="si2"><div class="step-circle">2</div><div class="step-label">Data &amp; Hora</div></div>
-    <div class="step-item" id="si3"><div class="step-circle">3</div><div class="step-label">Seus Dados</div></div>
-    <div class="step-item" id="si4"><div class="step-circle">4</div><div class="step-label">Confirmado!</div></div>
-  </div>
-
-  <!-- Panel 1: service -->
-  <div class="booking-panel active" id="p1">
-    <div class="svc-grid" id="svcGrid"></div>
-    <div class="step-nav">
-      <button class="btn-primary" id="btn12" onclick="goStep(2)" disabled>Próximo →</button>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/Unha de gel.webp" alt="Unhas de Gel" /></div>
+        <h3>Unhas de Gel</h3>
+        <p>Alongamento e revestimento em gel de alta durabilidade. Resultado impecável com brilho intenso.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/lixamento de unha.jpg" alt="Lixamento de Unhas" /></div>
+        <h3>Lixamento de Unhas</h3>
+        <p>Modelagem e lixamento profissional para o formato ideal, preparando para qualquer acabamento.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/remocao de cuticula.jpg" alt="Remoção de Cutículas" /></div>
+        <h3>Remoção de Cutículas</h3>
+        <p>Remoção suave e cuidadosa das cutículas, promovendo saúde e estética perfeita.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/hidratacao profunda.webp" alt="Hidratação Profunda" /></div>
+        <h3>Hidratação Profunda</h3>
+        <p>Tratamento intensivo com massagem relaxante, hidratantes premium e óleos nutritivos.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/esmaltacao tradional.jpg" alt="Esmaltação Tradicional" /></div>
+        <h3>Esmaltação Tradicional</h3>
+        <p>Aplicação de esmalte tradicional com acabamento profissional e cor vibrante.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/esmaltacao em gel.jpg" alt="Esmaltação em Gel" /></div>
+        <h3>Esmaltação em Gel</h3>
+        <p>Esmaltação em gel de longa duração com brilho intenso. Sem lascas por semanas.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Panel 2: calendar + slots -->
-  <div class="booking-panel" id="p2">
-    <div class="cal-wrap">
-      <div class="cal-box">
-        <div class="cal-head">
-          <button class="cal-nav-btn" id="prevM">‹</button>
-          <div class="cal-title-txt" id="calTitleTxt"></div>
-          <button class="cal-nav-btn" id="nextM">›</button>
+  <!-- ── Booking ──────────────────────────────────────────────── -->
+  <section id="agendar">
+    <div class="booking-header reveal">
+      <div class="section-tag">Agendamento Online</div>
+      <h2 class="section-title">Agende seu horário</h2>
+      <p class="section-sub">Escolha o serviço, data e horário. Simples, rápido e sem precisar ligar!</p>
+    </div>
+
+    <!-- Steps bar -->
+    <div class="steps-bar" id="stepsBar">
+      <div class="step-item active" id="si1">
+        <div class="step-circle">1</div>
+        <div class="step-label">Serviço</div>
+      </div>
+      <div class="step-item" id="si2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Data &amp; Hora</div>
+      </div>
+      <div class="step-item" id="si3">
+        <div class="step-circle">3</div>
+        <div class="step-label">Seus Dados</div>
+      </div>
+      <div class="step-item" id="si4">
+        <div class="step-circle">4</div>
+        <div class="step-label">Confirmado!</div>
+      </div>
+    </div>
+
+    <!-- Step 1 — Select Service -->
+    <div class="booking-panel active" id="p1">
+      <div class="svc-grid" id="svcGrid"></div>
+      <div class="step-nav">
+        <button class="btn-primary" id="btn12" onclick="goStep(2)" disabled>Próximo →</button>
+      </div>
+    </div>
+
+    <!-- Step 2 — Date & Time -->
+    <div class="booking-panel" id="p2">
+      <div class="cal-wrap">
+        <div class="cal-box">
+          <div class="cal-head">
+            <button class="cal-nav-btn" id="prevM">‹</button>
+            <div class="cal-title-txt" id="calTitleTxt"></div>
+            <button class="cal-nav-btn" id="nextM">›</button>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
         </div>
-        <div class="cal-grid" id="calGrid"></div>
-      </div>
-      <div class="slots-box">
-        <div class="slots-title" id="slotsHd">Selecione uma data</div>
-        <div class="slots-grid2" id="slotsGrid"><div class="slots-empty">👆 Escolha uma data no calendário</div></div>
-      </div>
-    </div>
-    <div class="step-nav">
-      <button class="btn-ghost" onclick="goStep(1)">← Voltar</button>
-      <button class="btn-primary" id="btn23" onclick="goStep(3)" disabled>Próximo →</button>
-    </div>
-  </div>
-
-  <!-- Panel 3: personal data -->
-  <div class="booking-panel" id="p3">
-    <div class="info-form">
-      <div class="sum-mini" id="sumMini"></div>
-      <div class="frow">
-        <div class="fg"><label>Nome completo *</label><input id="cName" type="text" placeholder="Seu nome completo"/></div>
-        <div class="fg"><label>Telefone *</label><input id="cPhone" type="tel" placeholder="(27) 9 0000-0000"/></div>
-      </div>
-      <div class="fg"><label>E-mail</label><input id="cEmail" type="email" placeholder="seu@email.com"/></div>
-      <div class="fg"><label>Observações</label><textarea id="cNotes" placeholder="Preferências, dúvidas ou cuidados especiais..."></textarea></div>
-    </div>
-    <div class="step-nav">
-      <button class="btn-ghost" onclick="goStep(2)">← Voltar</button>
-      <button class="btn-primary" onclick="doConfirm()">✦ Confirmar Agendamento</button>
-    </div>
-  </div>
-
-  <!-- Panel 4: success -->
-  <div class="booking-panel" id="p4">
-    <div class="confirm-box">
-      <span class="confirm-icon2">🎉</span>
-      <h3>Horário Reservado!</h3>
-      <p>Seu agendamento foi salvo com sucesso. Anote o código abaixo para consultas futuras.</p>
-      <div class="conf-details" id="confDetails"></div>
-      <p style="font-size:.8rem;color:var(--muted)">Em caso de dúvidas, fale no WhatsApp informando seu código.</p>
-      <div class="step-nav" style="margin-top:1.5rem">
-        <button class="btn-ghost" onclick="resetFlow()">Novo agendamento</button>
-        <a href="https://wa.me/5527999999999" target="_blank" class="btn-primary">📱 WhatsApp</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="sobre">
-  <div class="about-grid">
-    <div class="about-visual reveal">
-      <div class="about-visual-inner"><span class="big-icon">💅</span><p>Arte em cada detalhe</p></div>
-      <div class="about-badge"><div class="badge-icon">⭐</div><div class="badge-text"><strong>5.0 · 51 avaliações</strong>Google Reviews</div></div>
-    </div>
-    <div class="about-content reveal">
-      <div><div class="section-tag">Sobre nós</div><h2 class="section-title">Paixão pela arte <em style="font-style:italic;color:var(--rose-deep)">das unhas</em></h2></div>
-      <p class="section-sub">O <strong>Beatriz Gonçalves Studio</strong> nasceu da paixão pela beleza e pelo cuidado com cada cliente. Localizado em Vila Velha, ES, nosso studio oferece ambiente acolhedor, higienizado e cheio de carinho.</p>
-      <p class="section-sub">Beatriz é Nail Designer apaixonada por criar beleza real. Com técnicas atualizadas, produtos premium e atenção especial em cada atendimento.</p>
-      <div class="about-features">
-        <div class="about-feature">Ambiente higienizado e aconchegante</div>
-        <div class="about-feature">Produtos premium de alta qualidade</div>
-        <div class="about-feature">Atendimento personalizado e com carinho</div>
-        <div class="about-feature">Agendamento fácil pelo site, sem ligações</div>
-        <div class="about-feature">Técnicas modernas e atualizadas</div>
-      </div>
-      <div><a href="#agendar" class="btn-primary">📅 Agendar Agora</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="depoimentos" style="background:var(--white)">
-  <div class="testimonials-header reveal">
-    <div class="section-tag">Avaliações</div>
-    <h2 class="section-title">O que dizem nossas clientes</h2>
-    <div class="rating-row"><span class="stars">★★★★★</span><span style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--ink)">5.0</strong> · 51 avaliações no Google</span></div>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"Muito boa, pessoal muito atencioso e gente boa. Indico com certeza!!"</p><div class="t-author"><div class="t-avatar">A</div><div><div class="t-name">Ana Paula S.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div></div></div>
-    <div class="testimonial-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"Atendimento agendado e o local é top, recomendo! Excelente atendimento, superou minhas expectativas."</p><div class="t-author"><div class="t-avatar">M</div><div><div class="t-name">Marina R.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div></div></div>
-    <div class="testimonial-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"Studio incrível! Beatriz é maravilhosa, já sou cliente fiel. Vale muito a pena!"</p><div class="t-author"><div class="t-avatar">C</div><div><div class="t-name">Carla F.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div></div></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contato" style="background:var(--rose-pale)">
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <div><div class="section-tag">Contato</div><h2 class="section-title">Fale conosco</h2><p class="section-sub">Estamos prontas para cuidar das suas unhas com todo carinho.</p></div>
-      <div class="contact-item"><div class="contact-icon-box">📍</div><div><span class="contact-label">Endereço</span><div class="contact-value">Vila Velha, Espírito Santo · ES, Brasil</div></div></div>
-      <div class="contact-item"><div class="contact-icon-box">📱</div><div><span class="contact-label">WhatsApp</span><div class="contact-value"><a href="https://wa.me/5527999999999" target="_blank">(27) 9 9999-9999</a></div></div></div>
-      <div class="contact-item"><div class="contact-icon-box">✉️</div><div><span class="contact-label">E-mail</span><div class="contact-value"><a href="mailto:__beatrizstudio@gmail.com">__beatrizstudio@gmail.com</a></div></div></div>
-      <div class="contact-item"><div class="contact-icon-box">🕐</div><div><span class="contact-label">Horário</span><div class="contact-value">Seg – Sex: 9h às 19h · Sábado: 9h às 17h</div></div></div>
-      <div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119069.56897959658!2d-40.41178!3d-20.3297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817e0cb4b1ca5%3A0x1a4a2bd8bc0f2a2a!2sVila%20Velha%2C%20ES!5e0!3m2!1spt-BR!2sbr!4v1714000000000!5m2!1spt-BR!2sbr" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-    </div>
-    <div class="reveal" style="display:flex;flex-direction:column;gap:1.2rem">
-      <div style="background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:1.8rem;box-shadow:0 4px 16px var(--shadow)">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:1rem">Precisa de ajuda?</p>
-        <p style="font-size:.88rem;color:var(--muted);line-height:1.7;margin-bottom:1.4rem">Dúvidas sobre serviços, preços ou quer cancelar? Entre em contato!</p>
-        <a href="https://wa.me/5527999999999?text=Olá! Vim pelo site." target="_blank" class="btn-primary" style="width:100%;justify-content:center">💬 Falar no WhatsApp</a>
-      </div>
-      <div class="lookup-box">
-        <p>Verificar agendamento</p>
-        <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem">Consulte seu horário pelo código recebido.</p>
-        <div class="lookup-row">
-          <input class="lookup-input" id="lkCode" type="text" placeholder="Código: BG-0000" onkeydown="if(event.key==='Enter')doLookup()"/>
-          <button class="btn-ghost" onclick="doLookup()" style="padding:.7rem 1.1rem;border-radius:11px">🔍</button>
+        <div class="slots-box">
+          <div class="slots-title" id="slotsHd">Selecione uma data</div>
+          <div class="slots-grid2" id="slotsGrid">
+            <div class="slots-empty">👆 Escolha uma data no calendário</div>
+          </div>
         </div>
-        <div id="lkResult" style="margin-top:.9rem;display:none"></div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-ghost" onclick="goStep(1)">← Voltar</button>
+        <button class="btn-primary" id="btn23" onclick="goStep(3)" disabled>Próximo →</button>
+      </div>
+    </div>
+
+    <!-- Step 3 — Client Info -->
+    <div class="booking-panel" id="p3">
+      <div class="info-form">
+        <div class="sum-mini" id="sumMini"></div>
+        <div class="frow">
+          <div class="fg">
+            <label>Nome completo *</label>
+            <input id="cName" type="text" placeholder="Seu nome completo" />
+          </div>
+          <div class="fg">
+            <label>Telefone *</label>
+            <input id="cPhone" type="tel" placeholder="(27) 9 0000-0000" />
+          </div>
+        </div>
+        <div class="fg">
+          <label>E-mail</label>
+          <input id="cEmail" type="email" placeholder="seu@email.com" />
+        </div>
+        <div class="fg">
+          <label>Observações</label>
+          <textarea id="cNotes" placeholder="Preferências, dúvidas ou cuidados especiais..."></textarea>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-ghost" onclick="goStep(2)">← Voltar</button>
+        <button class="btn-primary" onclick="doConfirm()">✦ Confirmar Agendamento</button>
+      </div>
+    </div>
+
+    <!-- Step 4 — Confirmation -->
+    <div class="booking-panel" id="p4">
+      <div class="confirm-box">
+        <span class="confirm-icon2">🎉</span>
+        <h3>Horário Reservado!</h3>
+        <p>Seu agendamento foi salvo com sucesso. Anote o código abaixo para consultas futuras.</p>
+        <div class="conf-details" id="confDetails"></div>
+        <p style="font-size:.8rem;color:var(--muted)">Em caso de dúvidas, fale no WhatsApp informando seu código.</p>
+        <div class="step-nav" style="margin-top:1.5rem">
+          <button class="btn-ghost" onclick="resetFlow()">Novo agendamento</button>
+          <a href="https://wa.me/5527999999999" target="_blank" class="btn-primary">📱 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ────────────────────────────────────────────────── -->
+  <section id="sobre">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-visual-inner">
+          <img src="imagens/Paixão pela arte das unhas.png" alt="Beatriz Gonçalves Studio" class="about-photo" />
+        </div>
+        <div class="about-badge">
+          <div class="badge-icon">⭐</div>
+          <div class="badge-text"><strong>5.0 · 51 avaliações</strong>Google Reviews</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <div>
+          <div class="section-tag">Sobre nós</div>
+          <h2 class="section-title">Paixão pela arte <em style="font-style:italic;color:var(--rose-deep)">das unhas</em></h2>
+        </div>
+        <p class="section-sub">
+          O <strong>Beatriz Gonçalves Studio</strong> nasceu da paixão pela beleza e pelo cuidado com cada
+          cliente. Localizado em Vila Velha, ES, nosso studio oferece ambiente acolhedor, higienizado e
+          cheio de carinho.
+        </p>
+        <p class="section-sub">
+          Beatriz é Nail Designer apaixonada por criar beleza real. Com técnicas atualizadas, produtos
+          premium e atenção especial em cada atendimento.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">Ambiente higienizado e aconchegante</div>
+          <div class="about-feature">Produtos premium de alta qualidade</div>
+          <div class="about-feature">Atendimento personalizado e com carinho</div>
+          <div class="about-feature">Agendamento fácil pelo site, sem ligações</div>
+          <div class="about-feature">Técnicas modernas e atualizadas</div>
+        </div>
+        <div><a href="#agendar" class="btn-primary">📅 Agendar Agora</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ─────────────────────────────────────────── -->
+  <section id="depoimentos" style="background:var(--white)">
+    <div class="testimonials-header reveal">
+      <div class="section-tag">Avaliações</div>
+      <h2 class="section-title">O que dizem nossas clientes</h2>
+      <div class="rating-row">
+        <span class="stars">★★★★★</span>
+        <span style="font-size:.9rem;color:var(--muted)">
+          <strong style="color:var(--ink)">5.0</strong> · 51 avaliações no Google
+        </span>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Muito boa, pessoal muito atencioso e gente boa. Indico com certeza!!"</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div><div class="t-name">Ana Paula S.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Atendimento agendado e o local é top, recomendo! Excelente atendimento, superou minhas expectativas."</p>
+        <div class="t-author">
+          <div class="t-avatar">M</div>
+          <div><div class="t-name">Marina R.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Studio incrível! Beatriz é maravilhosa, já sou cliente fiel. Vale muito a pena!"</p>
+        <div class="t-author">
+          <div class="t-avatar">C</div>
+          <div><div class="t-name">Carla F.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ──────────────────────────────────────────────── -->
+  <section id="contato" style="background:var(--rose-pale)">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div>
+          <div class="section-tag">Contato</div>
+          <h2 class="section-title">Fale conosco</h2>
+          <p class="section-sub">Estamos prontas para cuidar das suas unhas com todo carinho.</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">📍</div>
+          <div>
+            <span class="contact-label">Endereço</span>
+            <div class="contact-value">Vila Velha, Espírito Santo · ES, Brasil</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">📱</div>
+          <div>
+            <span class="contact-label">WhatsApp</span>
+            <div class="contact-value">
+              <a href="https://wa.me/5527999999999" target="_blank">(27) 9 9999-9999</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">✉️</div>
+          <div>
+            <span class="contact-label">E-mail</span>
+            <div class="contact-value">
+              <a href="mailto:__beatrizstudio@gmail.com">__beatrizstudio@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">🕐</div>
+          <div>
+            <span class="contact-label">Horário</span>
+            <div class="contact-value">Seg – Sex: 9h às 19h · Sábado: 9h às 17h</div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119069.56897959658!2d-40.41178!3d-20.3297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817e0cb4b1ca5%3A0x1a4a2bd8bc0f2a2a!2sVila%20Velha%2C%20ES!5e0!3m2!1spt-BR!2sbr!4v1714000000000!5m2!1spt-BR!2sbr"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.2rem">
+        <div style="background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:1.8rem;box-shadow:0 4px 16px var(--shadow)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:1rem">Precisa de ajuda?</p>
+          <p style="font-size:.88rem;color:var(--muted);line-height:1.7;margin-bottom:1.4rem">
+            Dúvidas sobre serviços, preços ou quer cancelar? Entre em contato!
+          </p>
+          <a href="https://wa.me/5527999999999?text=Olá! Vim pelo site." target="_blank"
+            class="btn-primary" style="width:100%;justify-content:center">
+            💬 Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="lookup-box">
+          <p>Verificar agendamento</p>
+          <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem">
+            Consulte seu horário pelo código recebido.
+          </p>
+          <div class="lookup-row">
+            <input class="lookup-input" id="lkCode" type="text" placeholder="Código: BG-0000"
+              onkeydown="if(event.key==='Enter')doLookup()" />
+            <button class="btn-ghost" onclick="doLookup()"
+              style="padding:.7rem 1.1rem;border-radius:11px">🔍</button>
+          </div>
+          <div id="lkResult" style="margin-top:.9rem;display:none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="color:#fff">Beatriz <span>Gonçalves</span> Studio</a>
+        <p>Studio de Nail Designer em Vila Velha, ES. Cuidado, arte e elegância em cada detalhe das suas unhas.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://wa.me/5527999999999" target="_blank" class="social-link" aria-label="WhatsApp">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Unhas de Gel</a></li>
+          <li><a href="#servicos">Lixamento</a></li>
+          <li><a href="#servicos">Remoção de Cutículas</a></li>
+          <li><a href="#servicos">Hidratação Profunda</a></li>
+          <li><a href="#servicos">Esmaltação Tradicional</a></li>
+          <li><a href="#servicos">Esmaltação em Gel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#agendar">Agendar Online</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#depoimentos">Avaliações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Beatriz Gonçalves Studio · Vila Velha, ES · Todos os direitos reservados.</p>
+      <p><a href="mailto:__beatrizstudio@gmail.com">__beatrizstudio@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp Float ──────────────────────────────────────── -->
+  <a href="https://wa.me/5527999999999?text=Olá! Vim pelo site." target="_blank"
+    class="wa-float" aria-label="WhatsApp">
+    <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ── Admin FAB ─────────────────────────────────────────────── -->
+  <button class="admin-fab" onclick="openAdm()" title="Painel da Beatriz">⚙️</button>
+
+  <!-- ── Admin Panel ───────────────────────────────────────────── -->
+  <div class="adm-overlay" id="admOverlay" onclick="closeAdmBg(event)">
+    <div class="adm-panel" id="admPanel">
+      <div class="adm-header">
+        <h2>💅 Painel da Beatriz</h2>
+        <button class="adm-close" onclick="closeAdm()">×</button>
+      </div>
+
+      <div class="adm-login" id="admLogin">
+        <span style="font-size:2.5rem">🔐</span>
+        <h3>Área Restrita</h3>
+        <p>Digite a senha para gerenciar os agendamentos.</p>
+        <input type="password" id="admPw" placeholder="Senha de acesso"
+          onkeydown="if(event.key==='Enter')checkPw()" />
+        <button class="btn-primary" onclick="checkPw()">Entrar</button>
+        <span class="adm-err" id="admErr">Senha incorreta.</span>
+        <p style="font-size:.72rem;color:#ddd;margin-top:.5rem"><code></code></p>
+      </div>
+
+      <div class="adm-body" id="admBody" style="display:none">
+        <div class="adm-stats" id="admStats"></div>
+        <div class="adm-filters">
+          <button class="af-btn active" onclick="setFilt('all',this)">Todos</button>
+          <button class="af-btn" onclick="setFilt('pending',this)">Pendentes</button>
+          <button class="af-btn" onclick="setFilt('confirmed',this)">Confirmados</button>
+          <button class="af-btn" onclick="setFilt('done',this)">Concluídos</button>
+          <button class="af-btn" onclick="setFilt('cancelled',this)">Cancelados</button>
+          <input class="adm-search" id="admSearch" placeholder="🔍 Buscar nome ou código..."
+            oninput="renderAdm()" />
+        </div>
+        <div id="admList"></div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="#" class="nav-logo" style="color:#fff">Beatriz <span>Gonçalves</span> Studio</a>
-      <p>Studio de Nail Designer em Vila Velha, ES. Cuidado, arte e elegância em cada detalhe das suas unhas.</p>
-      <div class="social-links">
-        <a href="#" class="social-link" aria-label="Instagram"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="#" class="social-link" aria-label="TikTok"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
-        <a href="https://wa.me/5527999999999" target="_blank" class="social-link" aria-label="WhatsApp"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-      </div>
-    </div>
-    <div class="footer-col"><h4>Serviços</h4><ul><li><a href="#servicos">Unhas de Gel</a></li><li><a href="#servicos">Lixamento</a></li><li><a href="#servicos">Remoção de Cutículas</a></li><li><a href="#servicos">Hidratação Profunda</a></li><li><a href="#servicos">Esmaltação Tradicional</a></li><li><a href="#servicos">Esmaltação em Gel</a></li></ul></div>
-    <div class="footer-col"><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#agendar">Agendar Online</a></li><li><a href="#sobre">Sobre Nós</a></li><li><a href="#depoimentos">Avaliações</a></li><li><a href="#contato">Contato</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Beatriz Gonçalves Studio · Vila Velha, ES · Todos os direitos reservados.</p>
-    <p><a href="mailto:__beatrizstudio@gmail.com">__beatrizstudio@gmail.com</a></p>
-  </div>
-</footer>
+  <!-- ── Scripts ──────────────────────────────────────────────── -->
+  <script src="script.js"></script>
 
-<a href="https://wa.me/5527999999999?text=Olá! Vim pelo site." target="_blank" class="wa-float" aria-label="WhatsApp"><svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-
-<button class="admin-fab" onclick="openAdm()" title="Painel da Beatriz">⚙️</button>
-
-<!-- ADMIN -->
-<div class="adm-overlay" id="admOverlay" onclick="closeAdmBg(event)">
-  <div class="adm-panel" id="admPanel">
-    <div class="adm-header">
-      <h2>💅 Painel da Beatriz</h2>
-      <button class="adm-close" onclick="closeAdm()">×</button>
-    </div>
-    <div class="adm-login" id="admLogin">
-      <span style="font-size:2.5rem">🔐</span>
-      <h3>Área Restrita</h3>
-      <p>Digite a senha para gerenciar os agendamentos.</p>
-      <input type="password" id="admPw" placeholder="Senha de acesso" onkeydown="if(event.key==='Enter')checkPw()"/>
-      <button class="btn-primary" onclick="checkPw()">Entrar</button>
-      <span class="adm-err" id="admErr">Senha incorreta.</span>
-      <p style="font-size:.72rem;color:#ddd;margin-top:.5rem"><code></code></p>
-    </div>
-    <div class="adm-body" id="admBody" style="display:none">
-      <div class="adm-stats" id="admStats"></div>
-      <div class="adm-filters">
-        <button class="af-btn active" onclick="setFilt('all',this)">Todos</button>
-        <button class="af-btn" onclick="setFilt('pending',this)">Pendentes</button>
-        <button class="af-btn" onclick="setFilt('confirmed',this)">Confirmados</button>
-        <button class="af-btn" onclick="setFilt('done',this)">Concluídos</button>
-        <button class="af-btn" onclick="setFilt('cancelled',this)">Cancelados</button>
-        <input class="adm-search" id="admSearch" placeholder="🔍 Buscar nome ou código..." oninput="renderAdm()"/>
-      </div>
-      <div id="admList"></div>
-    </div>
-  </div>
-</div>
-
-<script>
-// ═══════════════════ CONFIG ════════════════
-const DB_KEY   = 'bgstudio_v1_bookings';
-const ADMIN_PW = 'beatriz2025';
-
-const SVCS = [
-  {id:'gel',    name:'Unhas de Gel',           icon:'💅', dur:'90 min'},
-  {id:'lix',    name:'Lixamento de Unhas',     icon:'✨', dur:'30 min'},
-  {id:'cut',    name:'Remoção de Cutículas',   icon:'🌸', dur:'20 min'},
-  {id:'hid',    name:'Hidratação Profunda',    icon:'🤲', dur:'60 min'},
-  {id:'esm',    name:'Esmaltação Tradicional', icon:'🎨', dur:'40 min'},
-  {id:'gsl',    name:'Esmaltação em Gel',      icon:'💎', dur:'60 min'},
-];
-const SLOTS = ['09:00','09:30','10:00','10:30','11:00','11:30',
-               '13:00','13:30','14:00','14:30','15:00','15:30',
-               '16:00','16:30','17:00','17:30','18:00','18:30'];
-const MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
-                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-
-// ═══════════════════ STORAGE ═══════════════
-async function dbLoad(){
-  try{
-    const r = localStorage.getItem(DB_KEY);
-    return r ? JSON.parse(r) : [];
-  }catch{
-    return [];
-  }
-}
-
-async function dbSave(list){
-  localStorage.setItem(DB_KEY, JSON.stringify(list));
-}
-
-function dKey(d){ return d instanceof Date ? d.toISOString().slice(0,10) : d; }
-function genId(){ return 'BG-'+String(Math.floor(1000+Math.random()*9000)); }
-
-async function bookedOn(dateStr){
-  const all=await dbLoad();
-  return all.filter(b=>b.date===dateStr&&b.status!=='cancelled').map(b=>b.time);
-}
-
-// ═══════════════════ STATE ═════════════════
-let S = {svc:null, date:null, time:null};
-let calY, calM;
-(()=>{ const n=new Date(); calY=n.getFullYear(); calM=n.getMonth(); })();
-
-// ═══════════════════ STEP NAV ══════════════
-function goStep(n){
-  if(n===2&&!S.svc)   return;
-  if(n===3&&(!S.date||!S.time)) return;
-  [1,2,3,4].forEach(i=>{
-    document.getElementById('p'+i).classList.toggle('active',i===n);
-    const si=document.getElementById('si'+i);
-    si.classList.remove('active','done');
-    if(i===n) si.classList.add('active');
-    else if(i<n) si.classList.add('done');
-  });
-  if(n===3) drawSumMini();
-  document.getElementById('agendar').scrollIntoView({behavior:'smooth',block:'start'});
-}
-
-// ═══════════════════ STEP 1 ════════════════
-function initSvcs(){
-  document.getElementById('svcGrid').innerHTML = SVCS.map(s=>`
-    <div class="svc-card" id="sc-${s.id}" onclick="pickSvc('${s.id}')">
-      <span class="svc-icon2">${s.icon}</span>
-      <div class="svc-name">${s.name}</div>
-      <div class="svc-dur">⏱ ${s.dur}</div>
-    </div>`).join('');
-}
-function pickSvc(id){
-  S.svc = SVCS.find(s=>s.id===id);
-  document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('sel'));
-  document.getElementById('sc-'+id).classList.add('sel');
-  const b=document.getElementById('btn12'); b.disabled=false;
-}
-
-// ═══════════════════ STEP 2 ════════════════
-async function drawCal(){
-  document.getElementById('calTitleTxt').textContent = MONTHS[calM]+' '+calY;
-  const grid=document.getElementById('calGrid');
-  grid.innerHTML=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].map(d=>`<div class="cal-dn">${d}</div>`).join('');
-  const all=await dbLoad();
-  const byDate={};
-  all.filter(b=>b.status!=='cancelled').forEach(b=>{ if(!byDate[b.date])byDate[b.date]=[]; byDate[b.date].push(b.time); });
-  const first=new Date(calY,calM,1), dow=first.getDay(), dim=new Date(calY,calM+1,0).getDate();
-  const today=new Date(); today.setHours(0,0,0,0);
-  for(let i=0;i<dow;i++) grid.innerHTML+=`<div class="cal-d emp"></div>`;
-  for(let d=1;d<=dim;d++){
-    const dt=new Date(calY,calM,d), dk=dKey(dt);
-    const past=dt<today, sun=dt.getDay()===0;
-    const bkd=(byDate[dk]||[]).length, full=bkd>=SLOTS.length;
-    const isTd=dt.getTime()===today.getTime();
-    const isPk=S.date&&dKey(S.date)===dk;
-    let cls='cal-d';
-    if(past||sun||full) cls+=' dis';
-    if(isTd) cls+=' today';
-    if(isPk) cls+=' picked';
-    if(!past&&!sun&&bkd>0&&!full) cls+=' has-dot';
-    grid.innerHTML+=`<div class="${cls}" onclick="pickDate(${calY},${calM},${d})">${d}</div>`;
-  }
-}
-async function pickDate(y,m,d){
-  S.date=new Date(y,m,d); S.time=null;
-  await drawCal(); await drawSlots();
-  const b=document.getElementById('btn23'); b.disabled=true;
-}
-async function drawSlots(){
-  const hd=document.getElementById('slotsHd'), gr=document.getElementById('slotsGrid');
-  if(!S.date){ gr.innerHTML='<div class="slots-empty">👆 Escolha uma data no calendário</div>'; return; }
-  const dk=dKey(S.date), bkd=await bookedOn(dk);
-  hd.textContent=S.date.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
-  if(SLOTS.every(s=>bkd.includes(s))){ gr.innerHTML='<div class="slots-empty">😔 Sem horários disponíveis neste dia</div>'; return; }
-  gr.innerHTML=SLOTS.map(s=>{
-    const isB=bkd.includes(s), isP=S.time===s;
-    return`<button class="slot-b${isB?' bkd':''}${isP?' picked-slot':''}" ${isB?'disabled':''} onclick="pickSlot('${s}')">${s}</button>`;
-  }).join('');
-}
-function pickSlot(t){
-  S.time=t;
-  document.querySelectorAll('.slot-b').forEach(b=>b.classList.toggle('picked-slot',b.textContent===t));
-  const b=document.getElementById('btn23'); b.disabled=false;
-}
-document.getElementById('prevM').onclick=async()=>{ calM--; if(calM<0){calM=11;calY--;} await drawCal(); };
-document.getElementById('nextM').onclick=async()=>{ calM++; if(calM>11){calM=0;calY++;} await drawCal(); };
-
-// ═══════════════════ STEP 3 ════════════════
-function drawSumMini(){
-  const dt=S.date?.toLocaleDateString('pt-BR',{weekday:'short',day:'numeric',month:'short'})||'';
-  document.getElementById('sumMini').innerHTML=`
-    <span>${S.svc?.icon} <strong>${S.svc?.name}</strong></span>
-    <span>📅 <strong>${dt}</strong></span>
-    <span>🕐 <strong>${S.time}</strong></span>`;
-}
-async function doConfirm(){
-  const name=document.getElementById('cName').value.trim();
-  const phone=document.getElementById('cPhone').value.trim();
-  const email=document.getElementById('cEmail').value.trim();
-  const notes=document.getElementById('cNotes').value.trim();
-  if(!name){ alert('Por favor informe seu nome.'); return; }
-  if(!phone){ alert('Por favor informe seu telefone.'); return; }
-  // re-check
-  const bkd=await bookedOn(dKey(S.date));
-  if(bkd.includes(S.time)){ alert('Esse horário acabou de ser ocupado! Escolha outro.'); goStep(2); return; }
-  const id=genId();
-  const b={ id, service:S.svc.name, serviceIcon:S.svc.icon,
-            date:dKey(S.date), time:S.time, name, phone, email, notes,
-            status:'pending', createdAt:new Date().toISOString() };
-  const all=await dbLoad(); all.push(b); await dbSave(all);
-  // show
-  const dateDisp=S.date.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-  document.getElementById('confDetails').innerHTML=`
-    <div class="conf-row"><span>Serviço</span><span>${S.svc.icon} ${S.svc.name}</span></div>
-    <div class="conf-row"><span>Data</span><span>${dateDisp}</span></div>
-    <div class="conf-row"><span>Horário</span><span>${S.time}</span></div>
-    <div class="conf-row"><span>Nome</span><span>${name}</span></div>
-    <div class="conf-row"><span>Telefone</span><span>${phone}</span></div>
-    <div class="conf-row"><span>Código</span><span><span class="conf-code">${id}</span></span></div>`;
-  goStep(4);
-}
-function resetFlow(){
-  S={svc:null,date:null,time:null};
-  ['cName','cPhone','cEmail','cNotes'].forEach(id=>document.getElementById(id).value='');
-  document.querySelectorAll('.svc-card').forEach(c=>c.classList.remove('sel'));
-  document.getElementById('btn12').disabled=true;
-  goStep(1);
-}
-
-// ═══════════════════ LOOKUP ════════════════
-async function doLookup(){
-  const code=document.getElementById('lkCode').value.trim().toUpperCase();
-  const el=document.getElementById('lkResult'); el.style.display='block';
-  if(!code){ el.innerHTML=''; el.style.display='none'; return; }
-  const all=await dbLoad(), b=all.find(x=>x.id===code);
-  if(!b){ el.innerHTML=`<div style="background:#fee2e2;border-radius:9px;padding:.7rem 1rem;font-size:.83rem;color:#991b1b">❌ Código não encontrado.</div>`; return; }
-  const sMap={pending:'st-pending',confirmed:'st-confirmed',done:'st-done',cancelled:'st-cancelled'};
-  const sLabel={pending:'Pendente',confirmed:'Confirmado',done:'Concluído',cancelled:'Cancelado'};
-  el.innerHTML=`<div style="background:var(--rose-pale);border:1.5px solid var(--border);border-radius:12px;padding:1rem;font-size:.84rem;display:flex;flex-direction:column;gap:.4rem">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <strong style="color:var(--ink)">${b.serviceIcon} ${b.service}</strong>
-      <span class="bk-badge ${sMap[b.status]}">${sLabel[b.status]}</span>
-    </div>
-    <div style="color:var(--muted)">📅 ${b.date} às ${b.time}</div>
-    <div style="color:var(--muted)">👤 ${b.name} · 📱 ${b.phone}</div>
-  </div>`;
-}
-
-// ═══════════════════ ADMIN ═════════════════
-let admAuthed=false, admFilt='all';
-
-function openAdm(){ document.getElementById('admOverlay').classList.add('open'); if(admAuthed) renderAdmFull(); }
-function closeAdm(){ document.getElementById('admOverlay').classList.remove('open'); }
-function closeAdmBg(e){ if(e.target===document.getElementById('admOverlay')) closeAdm(); }
-
-function checkPw(){
-  if(document.getElementById('admPw').value===ADMIN_PW){
-    admAuthed=true;
-    document.getElementById('admLogin').style.display='none';
-    document.getElementById('admBody').style.display='flex';
-    renderAdmFull();
-  } else { document.getElementById('admErr').style.display='block'; }
-}
-async function renderAdmFull(){
-  const all=await dbLoad();
-  const today=dKey(new Date());
-  document.getElementById('admStats').innerHTML=`
-    <div class="adm-stat"><div class="asn">${all.length}</div><div class="asl">Total</div></div>
-    <div class="adm-stat"><div class="asn">${all.filter(b=>b.status==='pending').length}</div><div class="asl">Pendentes</div></div>
-    <div class="adm-stat"><div class="asn">${all.filter(b=>b.date===today&&b.status!=='cancelled').length}</div><div class="asl">Hoje</div></div>`;
-  renderAdm();
-}
-async function renderAdm(){
-  const all=await dbLoad();
-  const q=(document.getElementById('admSearch')?.value||'').toLowerCase();
-  let list=all.filter(b=>{
-    if(admFilt!=='all'&&b.status!==admFilt) return false;
-    if(q&&!b.name.toLowerCase().includes(q)&&!b.id.toLowerCase().includes(q)) return false;
-    return true;
-  }).sort((a,b)=>a.date===b.date?a.time.localeCompare(b.time):a.date.localeCompare(b.date));
-  const el=document.getElementById('admList');
-  if(!list.length){ el.innerHTML=`<div class="adm-empty"><span>📭</span>Nenhum agendamento encontrado.</div>`; return; }
-  const sMap={pending:'st-pending',confirmed:'st-confirmed',done:'st-done',cancelled:'st-cancelled'};
-  const sLabel={pending:'Pendente',confirmed:'Confirmado',done:'Concluído',cancelled:'Cancelado'};
-  el.innerHTML=list.map(b=>{
-    const [y,m,d]=b.date.split('-'), mon=MONTHS[parseInt(m)-1].slice(0,3).toUpperCase();
-    const acts=
-      b.status==='pending'   ?`<button class="bk-btn bb-ok"     onclick="setStatus('${b.id}','confirmed')">✓ Confirmar</button><button class="bk-btn bb-cancel" onclick="setStatus('${b.id}','cancelled')">✗ Cancelar</button>`:
-      b.status==='confirmed' ?`<button class="bk-btn bb-done"   onclick="setStatus('${b.id}','done')">✓ Concluir</button><button class="bk-btn bb-cancel" onclick="setStatus('${b.id}','cancelled')">✗ Cancelar</button>`:
-      `<button class="bk-btn bb-del" onclick="delBooking('${b.id}')">🗑</button>`;
-    return`<div class="bk-card">
-      <div class="bk-date"><div class="bk-day">${d}</div><div class="bk-mon">${mon}</div></div>
-      <div class="bk-info">
-        <div class="bk-name">${b.name}</div>
-        <div class="bk-meta">📱 ${b.phone}${b.email?' · '+b.email:''}<br>🕐 ${b.time}${b.notes?' · <em>'+b.notes+'</em>':''}</div>
-        <span class="bk-svc-tag">${b.serviceIcon} ${b.service}</span>
-        <div class="bk-code">${b.id}</div>
-      </div>
-      <div class="bk-actions"><span class="bk-badge ${sMap[b.status]}">${sLabel[b.status]}</span>${acts}</div>
-    </div>`;
-  }).join('');
-}
-async function setStatus(id,status){
-  const all=await dbLoad(), i=all.findIndex(b=>b.id===id);
-  if(i>=0){all[i].status=status;await dbSave(all);}
-  renderAdmFull();
-}
-async function delBooking(id){
-  if(!confirm('Excluir este agendamento definitivamente?')) return;
-  const all=await dbLoad(); await dbSave(all.filter(b=>b.id!==id));
-  renderAdmFull();
-}
-function setFilt(f,btn){
-  admFilt=f;
-  document.querySelectorAll('.af-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderAdm();
-}
-
-// ═══════════════════ MISC ══════════════════
-window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>20));
-const ham=document.getElementById('hamburger'),navL=document.getElementById('navLinks');
-ham.addEventListener('click',()=>navL.classList.toggle('open'));
-navL.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navL.classList.remove('open')));
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      obs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(el => {
-  observer.observe(el);
-});
-
-// INIT
-initSvcs();
-drawCal();
-</script>
 </body>
 </html>
