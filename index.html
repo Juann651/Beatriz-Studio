@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beatriz Gonçalves Studio | Nail Designer em Vila Velha - ES</title>
+  <meta name="description" content="Beatriz Gonçalves Studio — a melhor Nail Designer em Vila Velha, ES. Agende online agora!" />
+  <meta name="keywords" content="Studio Nail Designer, melhor Nail Designer em Vila Velha, unhas de gel Vila Velha" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Beatriz <span>Gonçalves</span> Studio</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#depoimentos">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#agendar" class="nav-cta">Agendar Online</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────────── -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-deco"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Studio Nail Designer · Vila Velha, ES</span>
+      <h1>Suas unhas<em>merecem arte.</em></h1>
+      <p class="hero-sub">
+        Bem-vinda ao Beatriz Gonçalves Studio. Cuidado, beleza e elegância em cada detalhe —
+        com técnicas premium e muito carinho.
+      </p>
+      <div class="hero-actions">
+        <a href="#agendar" class="btn-primary">📅 Agendar Online</a>
+        <a href="#servicos" class="btn-ghost">Ver Serviços</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">5.0</div><div class="stat-label">Avaliação</div></div>
+        <div><div class="stat-num">51+</div><div class="stat-label">Avaliações</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Dedicação</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services ────────────────────────────────────────────── -->
+  <section id="servicos">
+    <div class="services-header reveal">
+      <div class="section-tag">O que oferecemos</div>
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-sub">
+        Tratamentos especializados para realçar a beleza e saúde das suas unhas,
+        com produtos de alta qualidade.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/Unha de gel.webp" alt="Unhas de Gel" /></div>
+        <h3>Unhas de Gel</h3>
+        <p>Alongamento e revestimento em gel de alta durabilidade. Resultado impecável com brilho intenso.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/lixamento de unha.jpg" alt="Lixamento de Unhas" /></div>
+        <h3>Lixamento de Unhas</h3>
+        <p>Modelagem e lixamento profissional para o formato ideal, preparando para qualquer acabamento.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/remocao de cuticula.jpg" alt="Remoção de Cutículas" /></div>
+        <h3>Remoção de Cutículas</h3>
+        <p>Remoção suave e cuidadosa das cutículas, promovendo saúde e estética perfeita.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/hidratacao profunda.webp" alt="Hidratação Profunda" /></div>
+        <h3>Hidratação Profunda</h3>
+        <p>Tratamento intensivo com massagem relaxante, hidratantes premium e óleos nutritivos.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/esmaltacao tradional.jpg" alt="Esmaltação Tradicional" /></div>
+        <h3>Esmaltação Tradicional</h3>
+        <p>Aplicação de esmalte tradicional com acabamento profissional e cor vibrante.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><img src="imagens/esmaltacao em gel.jpg" alt="Esmaltação em Gel" /></div>
+        <h3>Esmaltação em Gel</h3>
+        <p>Esmaltação em gel de longa duração com brilho intenso. Sem lascas por semanas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Booking ──────────────────────────────────────────────── -->
+  <section id="agendar">
+    <div class="booking-header reveal">
+      <div class="section-tag">Agendamento Online</div>
+      <h2 class="section-title">Agende seu horário</h2>
+      <p class="section-sub">Escolha o serviço, data e horário. Simples, rápido e sem precisar ligar!</p>
+    </div>
+
+    <!-- Steps bar -->
+    <div class="steps-bar" id="stepsBar">
+      <div class="step-item active" id="si1">
+        <div class="step-circle">1</div>
+        <div class="step-label">Serviço</div>
+      </div>
+      <div class="step-item" id="si2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Data &amp; Hora</div>
+      </div>
+      <div class="step-item" id="si3">
+        <div class="step-circle">3</div>
+        <div class="step-label">Seus Dados</div>
+      </div>
+      <div class="step-item" id="si4">
+        <div class="step-circle">4</div>
+        <div class="step-label">Confirmado!</div>
+      </div>
+    </div>
+
+    <!-- Step 1 — Select Service -->
+    <div class="booking-panel active" id="p1">
+      <div class="svc-grid" id="svcGrid"></div>
+      <div class="step-nav">
+        <button class="btn-primary" id="btn12" onclick="goStep(2)" disabled>Próximo →</button>
+      </div>
+    </div>
+
+    <!-- Step 2 — Date & Time -->
+    <div class="booking-panel" id="p2">
+      <div class="cal-wrap">
+        <div class="cal-box">
+          <div class="cal-head">
+            <button class="cal-nav-btn" id="prevM">‹</button>
+            <div class="cal-title-txt" id="calTitleTxt"></div>
+            <button class="cal-nav-btn" id="nextM">›</button>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+        <div class="slots-box">
+          <div class="slots-title" id="slotsHd">Selecione uma data</div>
+          <div class="slots-grid2" id="slotsGrid">
+            <div class="slots-empty">👆 Escolha uma data no calendário</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-ghost" onclick="goStep(1)">← Voltar</button>
+        <button class="btn-primary" id="btn23" onclick="goStep(3)" disabled>Próximo →</button>
+      </div>
+    </div>
+
+    <!-- Step 3 — Client Info -->
+    <div class="booking-panel" id="p3">
+      <div class="info-form">
+        <div class="sum-mini" id="sumMini"></div>
+        <div class="frow">
+          <div class="fg">
+            <label>Nome completo *</label>
+            <input id="cName" type="text" placeholder="Seu nome completo" />
+          </div>
+          <div class="fg">
+            <label>Telefone *</label>
+            <input id="cPhone" type="tel" placeholder="(27) 9 0000-0000" />
+          </div>
+        </div>
+        <div class="fg">
+          <label>E-mail</label>
+          <input id="cEmail" type="email" placeholder="seu@email.com" />
+        </div>
+        <div class="fg">
+          <label>Observações</label>
+          <textarea id="cNotes" placeholder="Preferências, dúvidas ou cuidados especiais..."></textarea>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-ghost" onclick="goStep(2)">← Voltar</button>
+        <button class="btn-primary" onclick="doConfirm()">✦ Confirmar Agendamento</button>
+      </div>
+    </div>
+
+    <!-- Step 4 — Confirmation -->
+    <div class="booking-panel" id="p4">
+      <div class="confirm-box">
+        <span class="confirm-icon2">🎉</span>
+        <h3>Horário Reservado!</h3>
+        <p>Seu agendamento foi salvo com sucesso. Anote o código abaixo para consultas futuras.</p>
+        <div class="conf-details" id="confDetails"></div>
+        <p style="font-size:.8rem;color:var(--muted)">Em caso de dúvidas, fale no WhatsApp informando seu código.</p>
+        <div class="step-nav" style="margin-top:1.5rem">
+          <button class="btn-ghost" onclick="resetFlow()">Novo agendamento</button>
+          <a href="https://wa.me/5527999999999" target="_blank" class="btn-primary">📱 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ────────────────────────────────────────────────── -->
+  <section id="sobre">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-visual-inner">
+          <img src="imagens/Paixão pela arte das unhas.png" alt="Beatriz Gonçalves Studio" class="about-photo" />
+        </div>
+        <div class="about-badge">
+          <div class="badge-icon">⭐</div>
+          <div class="badge-text"><strong>5.0 · 51 avaliações</strong>Google Reviews</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <div>
+          <div class="section-tag">Sobre nós</div>
+          <h2 class="section-title">Paixão pela arte <em style="font-style:italic;color:var(--rose-deep)">das unhas</em></h2>
+        </div>
+        <p class="section-sub">
+          O <strong>Beatriz Gonçalves Studio</strong> nasceu da paixão pela beleza e pelo cuidado com cada
+          cliente. Localizado em Vila Velha, ES, nosso studio oferece ambiente acolhedor, higienizado e
+          cheio de carinho.
+        </p>
+        <p class="section-sub">
+          Beatriz é Nail Designer apaixonada por criar beleza real. Com técnicas atualizadas, produtos
+          premium e atenção especial em cada atendimento.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">Ambiente higienizado e aconchegante</div>
+          <div class="about-feature">Produtos premium de alta qualidade</div>
+          <div class="about-feature">Atendimento personalizado e com carinho</div>
+          <div class="about-feature">Agendamento fácil pelo site, sem ligações</div>
+          <div class="about-feature">Técnicas modernas e atualizadas</div>
+        </div>
+        <div><a href="#agendar" class="btn-primary">📅 Agendar Agora</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ─────────────────────────────────────────── -->
+  <section id="depoimentos" style="background:var(--white)">
+    <div class="testimonials-header reveal">
+      <div class="section-tag">Avaliações</div>
+      <h2 class="section-title">O que dizem nossas clientes</h2>
+      <div class="rating-row">
+        <span class="stars">★★★★★</span>
+        <span style="font-size:.9rem;color:var(--muted)">
+          <strong style="color:var(--ink)">5.0</strong> · 51 avaliações no Google
+        </span>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Muito boa, pessoal muito atencioso e gente boa. Indico com certeza!!"</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div><div class="t-name">Ana Paula S.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Atendimento agendado e o local é top, recomendo! Excelente atendimento, superou minhas expectativas."</p>
+        <div class="t-author">
+          <div class="t-avatar">M</div>
+          <div><div class="t-name">Marina R.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Studio incrível! Beatriz é maravilhosa, já sou cliente fiel. Vale muito a pena!"</p>
+        <div class="t-author">
+          <div class="t-avatar">C</div>
+          <div><div class="t-name">Carla F.</div><div class="t-date">Avaliação Google · 5 estrelas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ──────────────────────────────────────────────── -->
+  <section id="contato" style="background:var(--rose-pale)">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div>
+          <div class="section-tag">Contato</div>
+          <h2 class="section-title">Fale conosco</h2>
+          <p class="section-sub">Estamos prontas para cuidar das suas unhas com todo carinho.</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">📍</div>
+          <div>
+            <span class="contact-label">Endereço</span>
+            <div class="contact-value">Vila Velha, Espírito Santo · ES, Brasil</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">📱</div>
+          <div>
+            <span class="contact-label">WhatsApp</span>
+            <div class="contact-value">
+              <a href="https://wa.me/5527999999999" target="_blank">(27) 9 9999-9999</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">✉️</div>
+          <div>
+            <span class="contact-label">E-mail</span>
+            <div class="contact-value">
+              <a href="mailto:__beatrizstudio@gmail.com">__beatrizstudio@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon-box">🕐</div>
+          <div>
+            <span class="contact-label">Horário</span>
+            <div class="contact-value">Seg – Sex: 9h às 19h · Sábado: 9h às 17h</div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119069.56897959658!2d-40.41178!3d-20.3297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817e0cb4b1ca5%3A0x1a4a2bd8bc0f2a2a!2sVila%20Velha%2C%20ES!5e0!3m2!1spt-BR!2sbr!4v1714000000000!5m2!1spt-BR!2sbr"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.2rem">
+        <div style="background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:1.8rem;box-shadow:0 4px 16px var(--shadow)">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:1rem">Precisa de ajuda?</p>
+          <p style="font-size:.88rem;color:var(--muted);line-height:1.7;margin-bottom:1.4rem">
+            Dúvidas sobre serviços, preços ou quer cancelar? Entre em contato!
+          </p>
+          <a href="https://wa.me/5527999999999?text=Olá! Vim pelo site." target="_blank"
+            class="btn-primary" style="width:100%;justify-content:center">
+            💬 Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="lookup-box">
+          <p>Verificar agendamento</p>
+          <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem">
+            Consulte seu horário pelo código recebido.
+          </p>
+          <div class="lookup-row">
+            <input class="lookup-input" id="lkCode" type="text" placeholder="Código: BG-0000"
+              onkeydown="if(event.key==='Enter')doLookup()" />
+            <button class="btn-ghost" onclick="doLookup()"
+              style="padding:.7rem 1.1rem;border-radius:11px">🔍</button>
+          </div>
+          <div id="lkResult" style="margin-top:.9rem;display:none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="color:#fff">Beatriz <span>Gonçalves</span> Studio</a>
+        <p>Studio de Nail Designer em Vila Velha, ES. Cuidado, arte e elegância em cada detalhe das suas unhas.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://wa.me/5527999999999" target="_blank" class="social-link" aria-label="WhatsApp">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Unhas de Gel</a></li>
+          <li><a href="#servicos">Lixamento</a></li>
+          <li><a href="#servicos">Remoção de Cutículas</a></li>
+          <li><a href="#servicos">Hidratação Profunda</a></li>
+          <li><a href="#servicos">Esmaltação Tradicional</a></li>
+          <li><a href="#servicos">Esmaltação em Gel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#agendar">Agendar Online</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#depoimentos">Avaliações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Beatriz Gonçalves Studio · Vila Velha, ES · Todos os direitos reservados.</p>
+      <p><a href="mailto:__beatrizstudio@gmail.com">__beatrizstudio@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp Float ──────────────────────────────────────── -->
+  <a href="https://wa.me/5527999999999?text=Olá! Vim pelo site." target="_blank"
+    class="wa-float" aria-label="WhatsApp">
+    <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ── Admin FAB ─────────────────────────────────────────────── -->
+  <button class="admin-fab" onclick="openAdm()" title="Painel da Beatriz">⚙️</button>
+
+  <!-- ── Admin Panel ───────────────────────────────────────────── -->
+  <div class="adm-overlay" id="admOverlay" onclick="closeAdmBg(event)">
+    <div class="adm-panel" id="admPanel">
+      <div class="adm-header">
+        <h2>💅 Painel da Beatriz</h2>
+        <button class="adm-close" onclick="closeAdm()">×</button>
+      </div>
+
+      <div class="adm-login" id="admLogin">
+        <span style="font-size:2.5rem">🔐</span>
+        <h3>Área Restrita</h3>
+        <p>Digite a senha para gerenciar os agendamentos.</p>
+        <input type="password" id="admPw" placeholder="Senha de acesso"
+          onkeydown="if(event.key==='Enter')checkPw()" />
+        <button class="btn-primary" onclick="checkPw()">Entrar</button>
+        <span class="adm-err" id="admErr">Senha incorreta.</span>
+        <p style="font-size:.72rem;color:#ddd;margin-top:.5rem"><code></code></p>
+      </div>
+
+      <div class="adm-body" id="admBody" style="display:none">
+        <div class="adm-stats" id="admStats"></div>
+        <div class="adm-filters">
+          <button class="af-btn active" onclick="setFilt('all',this)">Todos</button>
+          <button class="af-btn" onclick="setFilt('pending',this)">Pendentes</button>
+          <button class="af-btn" onclick="setFilt('confirmed',this)">Confirmados</button>
+          <button class="af-btn" onclick="setFilt('done',this)">Concluídos</button>
+          <button class="af-btn" onclick="setFilt('cancelled',this)">Cancelados</button>
+          <input class="adm-search" id="admSearch" placeholder="🔍 Buscar nome ou código..."
+            oninput="renderAdm()" />
+        </div>
+        <div id="admList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Scripts ──────────────────────────────────────────────── -->
+  <script src="config.js"></script>
+  <script src="config.local.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
